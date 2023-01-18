@@ -9,12 +9,16 @@
 </p>
 <br>
 
+<div align="center">
+
 ![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-2.1-lightgrey.svg)
 ![Contributors](https://img.shields.io/github/contributors/larigens/team-up?style=plastic&color=lightgrey)
 ![Forks](https://img.shields.io/github/forks/larigens/team-up?style=plastic&color=lightgrey)
 ![Stars](https://img.shields.io/github/stars/larigens/team-up?style=plastic&color=lightgrey)
 ![Licence](https://img.shields.io/static/v1?label=License&message=Apache-2.0&color=lightgrey)
 ![Issues](https://img.shields.io/github/issues/larigens/team-up?style=plastic&color=lightgrey)
+
+</div>
 
 ---
 ## Description
@@ -30,9 +34,6 @@ Wrote is a back-end application that can be used to write and save notes.
   - [Setting Up](#setting-up)
 - [Mock-Up](#mock-up)
 - [Usage](#usage)
-- [Tests](#tests)
-  - [Prerequisites](#prerequisites-1)
-  - [Running Tests](#running-tests)
 - [Questions](#questions)
 - [Contributing](#contributing)
   - [Contributing Guidelines](#contributing-guidelines)
@@ -84,11 +85,6 @@ Open the project in VS Code and make sure you are in the directory of this appli
 npm i
 ```
 
-
-```bash
-npm i ejs
-```
-
 ## Mock-Up
 
 The following image shows the web application's appearance:
@@ -115,36 +111,6 @@ WHEN I click on the Write icon in the navigation at the top of the page
 THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
 
 If you need more guidance on how to use Team-Up, click [here]() for the tutorial!
-
-## Tests
-
-### Prerequisites
-
-To test this application, you will need to install [Jest](https://www.npmjs.com/package/jest).
-
-```bash
-npm i jest
-```
-
-Then, add Jest as a dev dependency to the project by running:
-
-```bash
-npm install --save-dev jest
-```
-
-### Running Tests
-
-Open your terminal, make sure you are in the directory of this application and type the command below:
-
-```bash
-npx jest
-```
-
-You should see a result like the following:
-
-<img src="./dist/assets/images/test-demo.png" alt="Test Screenshot" width="250px" height="160px" />
-
-All tests passed, and all four Test Suites ran without errors.
 
 ## Questions
 
@@ -173,7 +139,7 @@ Our Code of Conduct follows the same principles as the [Contributor Covenant](ht
 - [Inquirer](https://www.npmjs.com/package/inquirer)
 - [PaksTech](https://pakstech.com/blog/inquirer-js/)
 - [README Lab](https://github.com/larigens/readme-lab)
-- [Jest](https://www.npmjs.com/package/jest)
+- [Express.js](https://expressjs.com/en/4x/api.html)
 
 ### Links
 
