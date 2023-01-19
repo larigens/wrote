@@ -23,7 +23,7 @@
 ---
 ## Description
 
-Wrote is a back-end application that can be used to write and save notes.
+Wrote is a back-end application that can be used to write, save, retrieve and delete notes.
 
 ## Table of Contents
 - [Description](#description)
@@ -93,7 +93,6 @@ The following images shows the web application's appearance:
 
 <img src="./public/assets/images/demo1.png" alt="App Screenshot" width="700px" height="342px" />
 <img src="./public/assets/images/demo2.png" alt="App Screenshot" width="700px" height="342px" />
-<br>
 
 ## Usage
 

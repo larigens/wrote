@@ -1,6 +1,7 @@
 // Packages needed
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
 
 // Modules needed
 const fsUtils = require('../helpers/fsUtils');
@@ -48,51 +49,17 @@ router.post('/', (req, res) => {
 router.delete('/:id', (req, res) => {
     // Logs the request to the terminal
     console.info(`${req.method} request received`);
-    // Reads the db.json file 
-    fsUtils.readFromFile(fsUtils.fileName)
-        .then((data) => {
-            // Checks the array using the query parameter containing the id of a note that the user wants to delete, and rewrite the notes to the db.json file the array without this specific note.
-            notesArr = data.filter(note => note.id != req.params.id)
-            console.info(notesArr)
-            // Obtain existing notes and write updated notes back to the file.
-            fsUtils.readAndAppend(notesArr);
-            console.info(`Note deleted successfully 🚀`)
-            // res.json(notesArr);
-        })
-        .catch((err) => {
-            console.info(err)
-        })
+    // This function blocks the rest of the code from executing until all the data is read from a file.
+    let rawdata = fs.readFileSync(fsUtils.fileName)
+    // Convert rawdata(in a Buffer) into JSON object
+    let parsedData = JSON.parse(rawdata);
+    // Checks the array using the query parameter containing the id of a note that the user wants to delete, and rewrite the notes to the db.json file the array without this specific note.
+    notesArr = parsedData.filter(note => note.id != req.params.id)
+    console.info(notesArr)
+    // Writes updated notes back to the file.
+    fsUtils.writeToFile(fsUtils.fileName, notesArr);
+    console.info(`Note deleted successfully 🚀`)
+    res.json(notesArr);
 })
-
-// const db = require('../db/db.json')
-// const notesArr = [];
-// app
-//     .route("/api/notes/:id")
-//     // GET request for a single review
-//     .get((req, res) => {
-//         if (req.params.id) {
-//             console.info(`${req.method} request received to get a single note`);
-//             const noteID = req.params.id;
-//             // Goes through every note to find the matching ID.
-//             for (let i = 0; i < db.length; i++) {
-//                 const currentNote = db[i];
-//                 if (currentNote.id === noteID) {
-//                     res.status(200).json(currentNote);
-//                     return;
-//                 }
-//             }
-//             res.status(404).send('Note not found');
-//         }
-//         // Lets the client know that their request was received.
-//         res.send(`${req.method} request received for the note with id ${req.params.id}`);
-//         // Shows the user agent information in the terminal.
-//         console.info(req.rawHeaders);
-//         // Logs our request to the terminal.
-//         console.info(`${req.method} request received`);
-//         // Sending all notes to the client.
-//         return res.json(db)
-//     })
-//    
-
 
 module.exports = router;

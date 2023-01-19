@@ -23,7 +23,7 @@ const readAndAppend = (content) => {
     if (err) {
       console.error(err);
     } else {
-      // Convert string into JSON object
+      // Convert rawdata(in a Buffer) into JSON object
       const parsedData = JSON.parse(data);
         // Add a new note
       parsedData.push(content);
