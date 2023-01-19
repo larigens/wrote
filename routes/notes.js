@@ -8,7 +8,7 @@ const fsUtils = require('../helpers/fsUtils');
 // Helper method that gives each note a unique id when it's saved.
 const { v4: uuidv4 } = require('uuid');
 
-// GET Route for retrieving all the notes
+// GET Route for retrieving all the notes.
 router.get('/', (req, res) => {
     // Logs the request to the terminal
     console.info(`${req.method} request received`);
@@ -23,7 +23,7 @@ router.get('/', (req, res) => {
         })
 });
 
-// POST Route for a new note
+// POST Route for a new note.
 router.post('/', (req, res) => {
     console.info(`${req.method} request received`);
 
@@ -33,7 +33,7 @@ router.post('/', (req, res) => {
         const newNote = {
             title,
             text,
-            note_id: uuidv4(),
+            id: uuidv4(),
         };
         // Obtain existing notes and write updated notes back to the file.
         fsUtils.readAndAppend(newNote);
@@ -43,6 +43,26 @@ router.post('/', (req, res) => {
         res.status(500).json('Error in posting note');
     }
 });
+
+// DELETE Route to delete a note.
+router.delete('/:id', (req, res) => {
+    // Logs the request to the terminal
+    console.info(`${req.method} request received`);
+    // Reads the db.json file 
+    fsUtils.readFromFile(fsUtils.fileName)
+        .then((data) => {
+            // Checks the array using the query parameter containing the id of a note that the user wants to delete, and rewrite the notes to the db.json file the array without this specific note.
+            notesArr = data.filter(note => note.id != req.params.id)
+            console.info(notesArr)
+            // Obtain existing notes and write updated notes back to the file.
+            fsUtils.readAndAppend(notesArr);
+            console.info(`Note deleted successfully 🚀`)
+            // res.json(notesArr);
+        })
+        .catch((err) => {
+            console.info(err)
+        })
+})
 
 // const db = require('../db/db.json')
 // const notesArr = [];
@@ -72,17 +92,7 @@ router.post('/', (req, res) => {
 //         // Sending all notes to the client.
 //         return res.json(db)
 //     })
-//     .delete((req, res) => {
-//         // Logs that a DELETE request was received
-//         console.info(`${req.method} request received to delete a note`);
-//         // Checks the array using the query parameter containing the id of a note that the user wants to delete, and rewrite the notes to the db.json file the array without this specific note.
-//         notesArr = db.filter(note => note.id != req.params.id)
-//         res.json({
-//             message: `Note ${req.params.id} was removed!`,
-//             status: true
-//         })
-//         console.log(notesArr)
-//     })
+//    
 
 
 module.exports = router;

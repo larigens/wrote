@@ -2,7 +2,7 @@
 
 <p align="center">
     <img src="./public/assets/favicon/apple-touch-icon.png" alt="logo" width="120px" height="120px" />
-  <br>
+  <br><br>
   <i> Note Taker
     <br> built using Node.js / Express.js</i>
   <br>
@@ -79,17 +79,21 @@ npm i express
 
 ### Setting Up
 
-Open the project in VS Code and make sure you are in the directory of this application and then type the command below on your terminal:
+You can also open the project in VS Code and make sure you are in the directory of this application and then type the command below on your terminal:
 
 ```bash
 npm i
 ```
 
+Once you run this, npm will begin the installation process of all of the current project's dependencies.
+
 ## Mock-Up
 
-The following image shows the web application's appearance:
+The following images shows the web application's appearance:
 
-<img src="./public/assets/images/demo.png" alt="App Screenshot" width="700px" height="342px" />
+<img src="./public/assets/images/demo1.png" alt="App Screenshot" width="700px" height="342px" />
+<img src="./public/assets/images/demo2.png" alt="App Screenshot" width="700px" height="342px" />
+<br>
 
 ## Usage
 
@@ -99,18 +103,13 @@ Launch the application by entering the command below on your terminal:
 npm start
 ```
 
-After launching the application, the user will be presented with a landing page with a link to a notes page. If the link is clicked, it will display a page with existing notes listed in the left-hand column, plus empty fields to enter a new note title and the note’s text in the right-hand column
+After launching the application, the user will be able to use the webpage. The home page contains a link to the notes page, which has existing notes listed in the left column, plus empty fields, in the right column, for entering a new note title and note text.
 
-WHEN I enter a new note title and the note’s text
-THEN a Save icon appears in the navigation at the top of the page
-WHEN I click on the Save icon
-THEN the new note I have entered is saved and appears in the left-hand column with the other existing notes
-WHEN I click on an existing note in the list in the left-hand column
-THEN that note appears in the right-hand column
-WHEN I click on the Write icon in the navigation at the top of the page
-THEN I am presented with empty fields to enter a new note title and the note’s text in the right-hand column
+The user will only be able to save the new note if it contains a **title** and **content**, and then the save icon will appear in the navigation in the upper right corner of the page. After the note is saved, the new note will be displayed in the left column with the other existing notes.
 
-If you need more guidance on how to use Team-Up, click [here]() for the tutorial!
+If an existing note in the list is clicked, it will appear in the right column, but if the user clicks on the write icon in the navigation at the top of the page, they will again be presented with empty fields for entering a new note.
+
+If you need more guidance on how to use Wrote, click [here]() for the tutorial!
 
 ## Questions
 
@@ -136,10 +135,9 @@ Our Code of Conduct follows the same principles as the [Contributor Covenant](ht
 - [MDN](https://developer.mozilla.org/en-US/)
 - [Node.js](https://nodejs.org/en/)
 - [NPM](https://www.npmjs.com/)
-- [Inquirer](https://www.npmjs.com/package/inquirer)
-- [PaksTech](https://pakstech.com/blog/inquirer-js/)
 - [README Lab](https://github.com/larigens/readme-lab)
 - [Express.js](https://expressjs.com/en/4x/api.html)
+- [UUID](https://www.npmjs.com/package/uuid)
 
 ### Links
 
