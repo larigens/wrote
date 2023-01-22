@@ -1,10 +1,7 @@
-// Import the filesystem module
+// Dependencies
 const fs = require('fs');
-
 const util = require('util');
 const path = require('path');
-
-// Constant Declaration
 const fileName = (path.join(__dirname, '../db/db.json'));
 
 // Promise version of fs.readFile

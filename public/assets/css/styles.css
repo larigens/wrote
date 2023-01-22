@@ -1,8 +1,30 @@
+/* Pseudo-class that matches the root element of the document. */
+:root {
+  --dark-shades: #000000;
+  --dark-accent: #757575;
+  --main-brand: #2e2e36;
+  --light-accent: #C2DFE3;
+  --light-shades: #E0FBFC;
+  --gradient-top: linear-gradient(to top, var(--main-brand), var(--light-accent));
+  --font: 'Ephesis', cursive;
+}
+
 html,
 body {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+.title {
+  font-size: 46px;
+  font-family: var(--font);
+  font-style: italic;
+  letter-spacing: 0.8px;
+}
+
+nav {
+  background-color: var(--main-brand);
 }
 
 .save-note {
@@ -18,7 +40,7 @@ body {
 
 .note-textarea,
 .note-title {
-  color: #000000;
+  color: var(--dark-accent);
   width: 100%;
   outline: none;
   border: none;
@@ -38,7 +60,7 @@ body {
 
 .note-title:read-only,
 .note-textarea:read-only {
-  color: #757575;
+  color: var(--dark-accent);
 }
 
 .list-container .card {
