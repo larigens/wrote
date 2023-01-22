@@ -32,7 +32,6 @@ Wrote is a back-end application designed to help busy professionals stay organiz
 
 ## Table of Contents
 - [Description](#description)
-- [Table of Contents](#table-of-contents)
 - [Installation](#installation)
   - [Cloning the Repository](#cloning-the-repository)
   - [Prerequisites](#prerequisites)
