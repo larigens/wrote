@@ -107,7 +107,7 @@ Launch the application by entering the command below on your terminal:
 npm start
 ```
 
-<img src="./public/assets/images/demo3.gif" alt="typing npm start on terminal" width="700px" height="500px" />
+<img src="./public/assets/images/demo3.png" alt="npm start on terminal" />
 
 
 After lauching the application, the user will be able to use it locally, on their localhost page. The home page contains a link to the notes page, which has existing notes listed in the left column, plus empty fields, in the right column, for entering a new note title and note text.
