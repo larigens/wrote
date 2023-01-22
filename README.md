@@ -7,6 +7,11 @@
     <br> built using Node.js / Express.js</i>
   <br>
 </p>
+
+<p align="center">
+  <a href="https://wrote.herokuapp.com/"><strong> wrote.herokuapp.com </strong></a>
+  <br>
+</p>
 <br>
 
 <div align="center">
@@ -23,7 +28,7 @@
 ---
 ## Description
 
-Wrote is a back-end application that can be used to write, save, retrieve and delete notes.
+Wrote is a back-end application designed to help busy professionals stay organized and productive. It allows users to quickly and easily write notes, store them securely, and access them from any device. With its intuitive design and powerful features, Wrote is the perfect tool to increase your job performance  
 
 ## Table of Contents
 - [Description](#description)
@@ -91,8 +96,8 @@ Once you run this, npm will begin the installation process of all of the current
 
 The following images shows the web application's appearance:
 
-<img src="./public/assets/images/demo1.png" alt="App Screenshot" width="700px" height="342px" />
-<img src="./public/assets/images/demo2.png" alt="App Screenshot" width="700px" height="342px" />
+<img src="./public/assets/images/demo1.png" alt="App home page screenshot" width="700px" height="342px" />
+<img src="./public/assets/images/demo2.png" alt="App note page screenshot" width="700px" height="342px" />
 
 ## Usage
 
@@ -102,13 +107,16 @@ Launch the application by entering the command below on your terminal:
 npm start
 ```
 
-After launching the application, the user will be able to use the webpage. The home page contains a link to the notes page, which has existing notes listed in the left column, plus empty fields, in the right column, for entering a new note title and note text.
+<img src="./public/assets/images/demo3.gif" alt="typing npm start on terminal" width="700px" height="500px" />
+
+
+After lauching the application, the user will be able to use it locally, on their localhost page. The home page contains a link to the notes page, which has existing notes listed in the left column, plus empty fields, in the right column, for entering a new note title and note text.
 
 The user will only be able to save the new note if it contains a **title** and **content**, and then the save icon will appear in the navigation in the upper right corner of the page. After the note is saved, the new note will be displayed in the left column with the other existing notes.
 
 If an existing note in the list is clicked, it will appear in the right column, but if the user clicks on the write icon in the navigation at the top of the page, they will again be presented with empty fields for entering a new note.
 
-If you need more guidance on how to use Wrote, click [here]() for the tutorial!
+If you need more guidance on how to use Wrote, click [here](https://drive.google.com/file/d/10y5FeAIMznevCLIBznepEWvfWMIs60k8/view) for the tutorial!
 
 ## Questions
 

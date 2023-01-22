@@ -1,12 +1,27 @@
 [
     {
-        "title": "Buy food",
-        "text": "Milk, bread, eggs\n\nSprit, Gatorade",
-        "id": "b04066ba-0e77-4f33-9ff9-e46d1b92d9c6"
+        "title": "Call bank on Friday",
+        "text": "Need to renegotiate fees",
+        "id": "cf8006f3-35c6-4578-9523-8470df2a49fe"
     },
     {
-        "title": "fhfhfhfh",
-        "text": "fhfhfhfh",
-        "id": "15b18e41-07b9-4965-b27b-429c6682841b"
+        "title": "Reschedule delivery",
+        "text": "Switch to Tuesday @3pm",
+        "id": "8f56cfce-95e1-410a-ade9-3cce7a32f727"
+    },
+    {
+        "title": "Finish Payroll",
+        "text": "Pending: \n\n- John Doe\n- Jane Doe",
+        "id": "9e482806-6aa6-4590-9340-9e284fa4d555"
+    },
+    {
+        "title": "Check in with clients",
+        "text": "Meeting @10am with XYZ Inc\n\nMeeting @1pm with ABC LLC",
+        "id": "c20f062b-c2b9-4ab6-ae73-fdad4a207e0b"
+    },
+    {
+        "title": "Client lunch on Thursday",
+        "text": "Make reservations at Eat and Drink",
+        "id": "b6b38906-2f46-40ba-b9cd-46af475059ae"
     }
 ]
